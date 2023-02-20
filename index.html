@@ -17,12 +17,12 @@
         <h1 id="autor">Autor: Tomás barrera</h1>
 
         <div id="app">
-            <div class="jumbotron bg-secondary p-4 mb-3">
+            <div class="jumbotron bg-light p-4 mb-3">
                 <h1 id="title">{{ col.collection.title }}</h1>
             </div>
             <div class="container-fluid d-flex justify-content-center">
               <div class="row">
-                <div class="card me-2 mb-2" v-for="i in col.collection.items" style="width: 18rem;">
+                <div class="card" v-for="i in col.collection.items" style="width: 30rem;">
                     <div class="card-body">   
                       <dl>
                         <div v-for="datos in i.data">
@@ -30,7 +30,7 @@
                           <dd>{{ datos.value }}</dd>
                         </div>
                       </dl>
-                      <a v-bind:href="i.href">Ver</a>
+                      <a class="btn btn-primary" v-bind:href="i.href">Ver</a>
                     </div>
                   </div>
               </div>
