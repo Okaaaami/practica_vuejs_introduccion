@@ -7,6 +7,8 @@
         <meta name="author" content="">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
     </head>
 
     <body>
@@ -15,10 +17,12 @@
         <h1 id="autor">Autor: Tomás barrera</h1>
 
         <div id="app">
-            <div class="jumbotron">
+            <div class="jumbotron bg-secondary p-4 mb-3">
                 <h1 id="title">{{ col.collection.title }}</h1>
             </div>
-                <div class="card" v-for="i in col.collection.items" style="width: 18rem;">
+            <div class="container-fluid d-flex justify-content-center">
+              <div class="row">
+                <div class="card me-2 mb-2" v-for="i in col.collection.items" style="width: 18rem;">
                     <div class="card-body">   
                       <dl>
                         <div v-for="datos in i.data">
@@ -29,6 +33,8 @@
                       <a v-bind:href="i.href">Ver</a>
                     </div>
                   </div>
+              </div>
+            </div>
 
         </div>
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
